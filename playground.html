@@ -7,7 +7,7 @@
     <title>Playground</title>
     <style>
       body {
-        margin: 5px;
+        padding: 10px;
       }
       /* h2 {
         position: fixed;
@@ -54,6 +54,16 @@
         border: 1px solid black;
         border-radius: 50%;
       }
+      a {
+        text-decoration: none;
+      }
+      a:hover{
+          background-color: yellow;
+      }
+      p, span.red{
+          color: red;
+      }
+
     </style>
   </head>
   <body>
@@ -61,13 +71,16 @@
     <h1 class="max">Playground</h1>
     <div class="square"></div>
     <div class="circle"></div>
+    <a id="first-link" href="https://www.babson.edu">Link</a>
+    <a href="https://www.babson.edu/about">Link</a>
     <ol>
-      <li>a</li>
+      <li>a <span class="red">b</span> c d </li>
       <li>b</li>
       <li>c</li>
     </ol>
+    <h2>Lorem ipsum <span class="red">dolor</span> sit amet consectetur adipisicing elit. Eos, optio.</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro totam cum
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="red">Porro</span> totam cum
       aut dicta tempora. Et assumenda, esse tenetur qui hic fugit quia eum saepe
       ullam maiores provident eveniet id facilis quod! Odio quaerat incidunt
       totam recusandae tempora? Placeat fuga quis beatae adipisci earum velit?
