@@ -8,7 +8,7 @@
   <body>
     <h1>Click Me ... I am Changing</h1>
     <img id="img-mailbox" src="images/mailbox.png" alt="mailbox" width="30" />
-    <img src="images/beaver.jpg" widht="30" />
+    <!-- <img src="images/beaver.jpg" widht="30" /> -->
     <p>
       <button>I dare you to click on me!</button>
     </p>
@@ -45,12 +45,13 @@
       document.querySelector("h1").onclick = changeBackgroundColor;
 
       function enlargeImage() {
-        // const myImg = document.getElementById("img-mailbox");
+        const myImg = document.getElementById("img-mailbox");
         // const myImg = document.querySelector("#img-mailbox");
-        const myImg = document.querySelector("img");
+        // const myImg = document.querySelector("img");
         let w = myImg.width;
+        console.log(w);
         w = w + 30;
-        // myImg.width = 800;
+        myImg.width = w;
       }
 
       document.querySelector("img").addEventListener("mouseover", function () {
@@ -68,7 +69,9 @@
       //   };
 
       document.querySelector("button").addEventListener("click", function () {
+        changeBackgroundColor();
         c();
+        // TODO: Check the sequence change impact.
       });
     </script>
   </body>
