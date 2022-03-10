@@ -13,11 +13,25 @@
         alt="Tiger 1"
         title="Tiger is walking"
         width="400"
-        id="tiger"
+        id="tiger1"
+      />
+      <img
+        src="images/tiger2.jpg"
+        alt="Tiger 2"
+        title="Tiger is looking at me"
+        width="400"
+        id="tiger2"
+      />
+      <img
+        src="images/tiger3.jpg"
+        alt="Tiger 3"
+        title="Tiger is looking left"
+        width="400"
+        id="tiger3"
       />
     </div>
     <script>
-      function enlargeImage() {
+      function enlargeImage(imageId) {
         console.log("...starting...");
         // pseudo-code
         // 1. get the element we want to manipulate - get the image, assign it to a variable ✅
@@ -25,23 +39,44 @@
         // 3. change the value of variable, by multiplying 1.5 ✅
         // 4. assign the new value back to the width/height ✅
 
-        const imageEl = document.querySelector("#tiger");
+        // const imageEl = document.querySelector("#tiger");
+        const imageEl = document.getElementById(imageId);
         // console.log(imageEl.width);
         let w = imageEl.width;
-        w = w * 1.5;
+        w = w * 1.2;
         imageEl.width = w;
+        document.querySelector("h1").innerText = imageEl.title;
       }
 
-      document.querySelector("img").onmouseover = function () {
-        enlargeImage();
+      document.getElementById("tiger1").onmouseover = function () {
+        enlargeImage("tiger1");
       };
 
+      document.getElementById("tiger2").onmouseover = function () {
+        enlargeImage("tiger2");
+      };
+      document.getElementById("tiger3").onmouseover = function () {
+        enlargeImage("tiger3");
+      };
 
-      function reduceImage(){
-
+      function reduceImage(imageId) {
+        const imageEl = document.getElementById(imageId);
+        // console.log(imageEl.width);
+        let w = imageEl.width;
+        w = w / 1.2;
+        imageEl.width = w;
+        document.querySelector("h1").innerText =
+          "Manipulating Styles and Images";
       }
-
-
+      document.getElementById("tiger1").onmouseout = function () {
+        reduceImage("tiger1");
+      };
+      document.getElementById("tiger2").onmouseout = function () {
+        reduceImage("tiger2");
+      };
+      document.getElementById("tiger3").onmouseout = function () {
+        reduceImage("tiger3");
+      };
     </script>
   </body>
 </html>
